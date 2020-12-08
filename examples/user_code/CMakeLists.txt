@@ -1,10 +1,6 @@
 # Uncomment these lines with your custom file names
-# set(USER_CODE_FILES
-#     ADD_HERE_YOUR_FILE1.cpp
-#     ADD_HERE_YOUR_FILE1.hpp
-#     ADD_HERE_YOUR_FILE2.cpp
-#     # ...
-#     ADD_HERE_YOUR_FILEn.cpp)
+ set(USER_CODE_FILES
+     server.cpp)
 
 foreach(USER_CODE_FILE ${USER_CODE_FILES})
 
@@ -14,6 +10,7 @@ foreach(USER_CODE_FILE ${USER_CODE_FILES})
     set(EXE_NAME "${SOURCE_NAME}.bin")
   elseif (WIN32)
     set(EXE_NAME "UserCustomCode")
+    # set(EXE_NAME "${SOURCE_NAME}")
   endif ()
 
   message(STATUS "Adding Example ${EXE_NAME}")
